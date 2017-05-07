@@ -24,7 +24,9 @@ func (d DupMap) CountFiles(files []string) error {
 			return err
 		}
 		defer f.Close()
-		d.Count(f)
+		if err := d.Count(f); err != nil {
+			return err
+		}
 	}
 	return nil
 }
