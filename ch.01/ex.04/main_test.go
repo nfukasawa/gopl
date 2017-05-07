@@ -1,7 +1,9 @@
 package main
 
-import "testing"
-import "reflect"
+import (
+	"reflect"
+	"testing"
+)
 
 func TestDupMap(t *testing.T) {
 	dupmap := NewDupMap()
